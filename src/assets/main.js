@@ -23,6 +23,7 @@ function handleJSON(json){
         var courseDiv = $('<div>');
         courseDiv.addClass("course").html("<h3>" + course.title + "</h3>");
         courseDiv.append($('<img>', {src: course.badge}));
+        courseDiv.append($('<a>', {target: "_blank"}).attr('href', course.url).addClass('btn btn-primary').text("See Course"));
         badgesDiv.append(courseDiv);
     }
 };
